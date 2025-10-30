@@ -6,9 +6,9 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { CategoryDataTable } from "./data-table/category-data-table"
+import { BrandDataTable } from "./data-table/brand-data-table"
 
-export function CategoryLayout() {
+export function BrandLayout() {
     return (
         < div className="py-4">
             <BreadCrumb
@@ -21,13 +21,13 @@ export function CategoryLayout() {
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />                    
                     <BreadcrumbItem>
-                        <BreadcrumbPage>Categorias</BreadcrumbPage>
+                        <BreadcrumbPage>Marcas</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
 
             <div>
-                <CategoryDataTable />
+                <BrandDataTable />
             </div>
         </div>
     )
