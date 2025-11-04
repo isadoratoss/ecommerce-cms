@@ -3,6 +3,7 @@ import { CategoryLayout } from "./cases/categories/components/category-layout"
 import { Route } from "lucide-react"
 import { BrandLayout } from "./cases/brands/components/brand-layout"
 import { ProductLayout } from "./cases/products/components/product-layout"
+import { ToastContainer } from "react-toastify"
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
           
         </Routes>
       </main>
+
+      <ToastContainer />
     </div>
   )
 }
