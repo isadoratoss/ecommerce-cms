@@ -1,6 +1,5 @@
 import type { ColumnDef } from "@tanstack/react-table";
 import type { BrandDTO } from "../../dtos/brand.dto";
-import { Button } from "@/components/ui/button";
 import { DataTableAction } from "@/components/layout/data-table-actions";
 
 export const brandColumns: ColumnDef<BrandDTO>[] = [
@@ -9,9 +8,13 @@ export const brandColumns: ColumnDef<BrandDTO>[] = [
         header: 'Id'
     },
     {
-        accessorKey: 'actions',
+        accessorKey: 'name',
+        header: 'Nome da Marca'
+    },
+    {
+        id: 'actions',
         enableHiding: false,
-        cell: ({row}) => {
+        cell: ({ row }) => {
             const brand = row.original;
 
             return(
@@ -19,7 +22,6 @@ export const brandColumns: ColumnDef<BrandDTO>[] = [
                     <DataTableAction itemId={brand.id!} />
                 </div>
             )
-
         }
     }
 ];

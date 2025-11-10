@@ -11,7 +11,7 @@ export function ProductDataTable() {
             { isLoading ? (
                 <p>Carregando...</p>
             ) : (
-                <DataTable columns={productColumns} data={brands!} />
+                <DataTable columns={productColumns} data={products!} />
             )}
         </div>
 
