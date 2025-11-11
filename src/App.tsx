@@ -4,14 +4,19 @@ import { CategoryLayout } from "./cases/categories/components/category-layout"
 import { CategoryForm } from "./cases/categories/components/category-form"
 import { BrandLayout } from "./cases/brands/components/brand-layout"
 import { BrandForm } from "./cases/brands/components/brand-form"
-import { ProductLayout } from "./cases/products/components/prodcuct-layout"
+import { ProductLayout } from "./cases/products/components/product-layout"
 import { ProductForm } from "./cases/products/components/product-form"
+import { SidebarProvider } from "./components/ui/sidebar"
+import { AppSidebar } from "./components/layout/app-sidebar"
 
 
 function App() {
 
   return (
     <div className="wrapper">
+
+      <SidebarProvider>
+        <AppSidebar />
       
 
       <main>
