@@ -1,20 +1,20 @@
 
 import { BreadCrumb } from "@/components/layout/bread-crumb"
-import { ProductDataTable } from "./data-table/product-data-table"
+import { CustomerDataTable } from "./data-table/customer-data-table"
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group"
 import { Plus, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Outlet, useNavigate } from "react-router-dom"
 import { useState } from "react"
 
-export function ProductLayout() {
+export function CustomerLayout() {
 
     const navigate = useNavigate();
-          
+  
     const [searchTerm, setSearchTerm] = useState('');
     
     function handleCreate() {
-        navigate('/products/new');
+        navigate('/customers/new');
     }
 
     return (
@@ -43,7 +43,7 @@ export function ProductLayout() {
                 </div>
 
                 <div>
-                    <ProductDataTable searchTerm={searchTerm} />
+                    <CustomerDataTable searchTerm={searchTerm} />
                     <Outlet />
                 </div>
 

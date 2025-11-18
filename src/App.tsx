@@ -8,24 +8,26 @@ import { ProductLayout } from "./cases/products/components/product-layout"
 import { ProductForm } from "./cases/products/components/product-form"
 import { SidebarProvider } from "./components/ui/sidebar"
 import { AppSidebar } from "./components/layout/app-sidebar"
+import { OrderLayout } from "./cases/orders/components/order-layout"
+import { OrderForm } from "./cases/orders/components/order-form"
+import { CustomerLayout } from "./cases/customers/components/customer-layout"
+import { CustomerForm } from "./cases/customers/components/customer-form"
 
 
 function App() {
 
   return (
     <div className="wrapper">
-
+      
       <SidebarProvider>
         <AppSidebar />
-      
-
-      <main>
-        <Routes>
-          
-          <Route path="/categories" element={ <CategoryLayout />}>
-            <Route path="new" element={ <CategoryForm />} />
-            <Route path=":id" element={ <CategoryForm />} />
-          </Route>
+        <main className="w-full">
+          <Routes>
+            
+            <Route path="/categories" element={ <CategoryLayout />}>
+              <Route path="new" element={ <CategoryForm />} />
+              <Route path=":id" element={ <CategoryForm />} />
+            </Route>
 
             <Route path="/brands" element={ <BrandLayout /> }>
               <Route path="new" element={<BrandForm />} />
@@ -36,10 +38,20 @@ function App() {
               <Route path="new" element={<ProductForm />} />
               <Route path=":id" element={<ProductForm />} />
             </Route>
-          
-        </Routes>
-      </main>
 
+            <Route path="/orders" element={ <OrderLayout /> }>
+              <Route path="new" element={<OrderForm />} />
+              <Route path=":id" element={<OrderForm />} />
+            </Route>
+
+            <Route path="/customers" element={ <CustomerLayout /> }>
+              <Route path="new" element={<CustomerForm />} />
+              <Route path=":id" element={<CustomerForm />} />
+            </Route>
+            
+          </Routes>
+        </main>
+      </SidebarProvider>
       <ToastContainer />
 
     </div>
